@@ -3,19 +3,21 @@
 @tailwind utilities;
 
 :root {
-  --surface: 248 250 252;
-  --text: 15 23 42;
-  --muted: 71 85 105;
-  --accent: 14 116 144;
-  --border: 203 213 225;
+  --surface: 251 252 253;
+  --surface-muted: 244 247 250;
+  --text: 22 28 36;
+  --muted: 85 96 110;
+  --accent: 34 139 123;
+  --border: 216 223 232;
 }
 
 .dark {
-  --surface: 2 6 23;
-  --text: 226 232 240;
-  --muted: 148 163 184;
-  --accent: 34 211 238;
-  --border: 30 41 59;
+  --surface: 10 14 20;
+  --surface-muted: 18 25 35;
+  --text: 235 240 246;
+  --muted: 159 171 186;
+  --accent: 61 197 176;
+  --border: 45 57 74;
 }
 
 html,
@@ -26,8 +28,9 @@ body {
 body {
   @apply bg-surface text-text antialiased transition-colors duration-300;
   font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
-  background-image: radial-gradient(circle at 10% 15%, rgb(var(--accent) / 0.08), transparent 38%),
-    radial-gradient(circle at 90% 0%, rgb(var(--accent) / 0.12), transparent 32%);
+  background-image:
+    radial-gradient(circle at 8% 8%, rgb(var(--accent) / 0.08), transparent 30%),
+    radial-gradient(circle at 90% -10%, rgb(var(--accent) / 0.09), transparent 28%);
 }
 
 h1,
@@ -41,5 +44,9 @@ h3 {
 }
 
 .section-space {
-  @apply py-16 md:py-24;
+  @apply py-14 md:py-20;
+}
+
+.bg-surface-muted {
+  background-color: rgb(var(--surface-muted));
 }
