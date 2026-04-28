@@ -1,0 +1,45 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --surface: 248 250 252;
+  --text: 15 23 42;
+  --muted: 71 85 105;
+  --accent: 14 116 144;
+  --border: 203 213 225;
+}
+
+.dark {
+  --surface: 2 6 23;
+  --text: 226 232 240;
+  --muted: 148 163 184;
+  --accent: 34 211 238;
+  --border: 30 41 59;
+}
+
+html,
+body {
+  min-height: 100%;
+}
+
+body {
+  @apply bg-surface text-text antialiased transition-colors duration-300;
+  font-family: var(--font-body), ui-sans-serif, system-ui, sans-serif;
+  background-image: radial-gradient(circle at 10% 15%, rgb(var(--accent) / 0.08), transparent 38%),
+    radial-gradient(circle at 90% 0%, rgb(var(--accent) / 0.12), transparent 32%);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--font-heading), var(--font-body), ui-sans-serif, system-ui, sans-serif;
+}
+
+.container-base {
+  @apply mx-auto w-full max-w-6xl px-5 md:px-8;
+}
+
+.section-space {
+  @apply py-16 md:py-24;
+}
